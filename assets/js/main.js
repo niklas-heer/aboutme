@@ -1,0 +1,1 @@
+(function(){var n,r,t,o;n=1,t=$(".roles").height(),o=$(".roles").children().length,r=$(".roles div:nth-child(1)"),setInterval(function(){var i;return i=n*-t,r.css("margin-top",i+"px"),n===o?(r.css("margin-top","0px"),n=1):n++},2e3)}).call(this);

@@ -1,0 +1,57 @@
+html
+  head
+    title Niklas Heer
+    <link rel="profile" href="http://osprotocol.com" />
+    <meta property="os:repo" content="https://github.com/RichardLitt/open-source-protocol" />
+    <meta property="os:rcs_type" content="git" />
+    <meta property="os:src" content="git@github.com:RichardLitt/open-source-protocol.git" />
+    link(rel='stylesheet', href='assets/css/main.css')
+  body
+    .bgtint
+      section.bussinesscard
+        .flip
+          .front
+            .top
+              .logo
+                //span.fat N
+                //span.skinny H
+                img(src='assets/img/avatar.jpg', alt='HTML5 Doctor Logo')
+            .nametroduction
+              .name Niklas Heer
+              .introduction
+                .wrapper
+                  .roles
+                      div
+                        | I am social.
+                      div
+                        | I am curious.
+                      div
+                        | I ♥ free software.
+                      div
+                        | I am a web developer.
+            .contact
+              .info.blog(style="cursor: pointer;" onclick="window.open('http://blog.nheer.io', '_newtab');" target="newwindow")
+                span.ion-planet
+                p blog.nheer.io
+              .info.github(style="cursor: pointer;" onclick="window.open('https://github.com/niklas-heer', '_newtab');" target="newwindow")
+                span.ion-social-github
+                p @niklas-heer
+              .info.twitter(style="cursor: pointer;" onclick="window.open('https://twitter.com/niklas_heer', '_newtab');" target="newwindow")
+                span.ion-social-twitter
+                p @niklas_heer
+              .info.google-plus(style="cursor: pointer;" onclick="window.open('https://plus.google.com/u/0/+NiklasHeer', '_newtab');" target="newwindow")
+                span.ion-social-googleplus
+                p +NiklasHeer
+              .info.email(style="cursor: pointer;" onclick="window.open('mailto:niklas.heer@gmail.com', '_newtab');" target="newwindow")
+                span.ion-paper-airplane
+                p niklas.heer@gmail.com
+        .back
+        // FIXES FONT RENDERING
+    section.tooltip
+      p
+        | Hover over the card to see the back.
+
+  script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+  script(src='assets/js/main.js')
+
+
