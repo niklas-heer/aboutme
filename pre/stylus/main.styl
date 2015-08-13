@@ -285,15 +285,14 @@ a
   .link
     color white
     font-weight 600
+    padding 1px
     text-decoration underline
-    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-    background-image: linear-gradient(to top, white 50%, $_PrimaryColor 50%);
     background-position: 0 0;
     background-size: 200%;
     &:hover
       text-decoration none
       color $_SecondaryColor
-      background-position: 0 100%;
+      background-color white
 
 
 .popover-content:before
@@ -351,14 +350,11 @@ footer
     display inline-block
     padding 1px
     font-weight 500
-    background-position: 0 0;
     background-size: 200%;
-    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-    background-image: linear-gradient(to top, $_PrimaryColor 50%, transparent 50%);
     &:hover
       text-decoration none
       color $_SecondaryColor
-      background-position: 0 100%;
+      background-color: $_PrimaryColor
       text-shadow none
   .name.active
     text-decoration none
@@ -366,16 +362,13 @@ footer
     background-position: 0 100%;
     text-shadow none
   .link
-    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-    background-image: linear-gradient(to top, $_PrimaryColor 50%, transparent 50%);
-    background-position: 0 0;
     font-weight 600
     background-size: 200%;
     padding 1px
     &:hover
       text-decoration none
       color $_SecondaryColor
-      background-position: 0 100%;
+      background-color: $_PrimaryColor
       text-shadow none
 
 // Modal
