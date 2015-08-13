@@ -11,3 +11,10 @@ setInterval (->
   else
     current++
 ), 2000
+
+$(".dots-container, .popover-content").click (e) ->
+  e.stopPropagation()
+  $(this).siblings(".popover-content").fadeIn()
+
+$(document).click ->
+  $(".popover-content").fadeOut()

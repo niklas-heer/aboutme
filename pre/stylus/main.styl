@@ -36,7 +36,7 @@ body, html
   overflow hidden
   z-index 9
 
-.bgtint
+.me
   position absolute
   height 100%
   width 100%
@@ -50,12 +50,11 @@ p
 a
   color $_SecondaryColor
   text-decoration none
-  -webkit-transition all 0.2s ease-in-out
   transition all 0.2s ease-in-out
   &:hover
     color $_PrimaryColor
 
-.bussinesscard
+.card
   height 360px
   width 428px
   overflow hidden
@@ -113,10 +112,7 @@ a
           height 2.8em
           border-radius: 150px;
           box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-        .fat
-          font-weight 800
-        .skinny
-          font-weight 100
+
     .nametroduction
       margin-top 2.4em
       -ms-transform translateY(0)
@@ -143,8 +139,7 @@ a
       text-align center
       color $_SecondaryColor
       font-family: 'Raleway', sans-serif;
-      //font-family 'Old Standard TT', serif
-      //font-style italic
+
     .contact
       color $_SecondaryColor
       margin-left 1.7em
@@ -233,3 +228,99 @@ a
   div
     height 25px
     transition margin-top 1s ease-in-out
+
+// info
+.popover-wrap
+  z-index 1000
+  position absolute
+  top 10px
+  left 50%
+  transform translateX(-50%)
+
+.dots-container
+  width 40px
+  position absolute
+  padding 5px
+  transform translateX(-50%)
+
+.dots
+  background-color rgba(255,255,255,0.85)
+  width 5px
+  height 5px
+  border-radius 50%
+  position relative
+  margin auto
+  &:before
+    left -10px
+  &:after
+    right -10px
+
+.dots:before, .dots:after
+  content ''
+  background-color rgba(255,255,255,0.85)
+  width 5px
+  height 5px
+  border-radius 50%
+  position absolute
+
+.popover-content
+  padding-top: 13px;
+  display none
+  background-color #fff
+  width 300px
+  height 18px
+  position absolute
+  top 30px
+  left 0
+  transform translateX(-50%)
+  border-radius 1px
+  font-size 12px
+  &:before
+    border-width 12px
+    border-bottom-color #dbdbdb
+  &:after
+    border-width 11px
+    border-bottom-color #fff
+
+.popover-text
+  height 100%
+  background-color $_PrimaryColor
+  height: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  .link
+    color white
+    font-weight 600
+    text-decoration underline
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background-image: linear-gradient(to top, white 50%, $_PrimaryColor 50%);
+    background-position: 0 0;
+    background-size: 200%;
+    &:hover
+      text-decoration none
+      color $_SecondaryColor
+      background-position: 0 100%;
+
+
+.popover-content:before
+  z-index 900
+  border solid white
+  background-color white
+  content ' '
+  pointer-events none
+  position absolute
+  width 1em
+  height 1em
+  bottom 72%
+  left 50%
+  transform: translateX(-50%) rotate(45deg);
+
+.popover-content ul li a:hover:before, .popover-content ul li a:hover:after
+  background-color #fff
+
+.popover-content ul li a:before, .popover-content ul li a:after
+  content ''
+  position absolute
+  background-color #636363
+

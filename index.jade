@@ -1,6 +1,8 @@
 html
   head
     title Niklas Heer
+    <meta charset="utf-8">
+
     <meta property="og:title" content="Niklas Heer" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="The personal website of Niklas Heer." />
@@ -9,18 +11,26 @@ html
 
     <meta property="os:repo" content="https://github.com/niklas-heer/aboutme" />
     <meta property="os:rcs_type" content="git" />
-    <meta property="os:src" content="git@github.com:niklas-heer/aboutme.git" />
+    <meta property="os:src" content="https://github.com/niklas-heer/aboutme.git" />
 
     link(rel='stylesheet', href='assets/css/main.css')
   body
-    .bgtint
-      section.bussinesscard
+    .popover-wrap
+      .dots-container
+        .dots
+      .popover-content
+        .popover-text
+          center
+            p This project can be found on
+            a(href="https://github.com/niklas-heer/aboutme" target="_blank") 
+              span.link GitHub
+            | .
+    .me
+      section.card
         .flip
           .front
             .top
               .logo
-                //span.fat N
-                //span.skinny H
                 img(src='assets/img/avatar.jpg', alt='HTML5 Doctor Logo')
             .nametroduction
               .name Niklas Heer
@@ -51,13 +61,11 @@ html
               .info.email(style="cursor: pointer;" onclick="window.open('mailto:niklas.heer@gmail.com', '_newtab');" target="newwindow")
                 span.ion-paper-airplane
                 p niklas.heer@gmail.com
-        .back
-        // FIXES FONT RENDERING
-    section.tooltip
-      p
-        | Hover over the card to see the back.
+
+    // section.tooltip
+    //  p
+    //    | Hover over the card to see the back.
 
   script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
   script(src='assets/js/main.js')
-
 

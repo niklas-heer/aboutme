@@ -1,22 +1,36 @@
 
 <html>
   <head>
-    <title>Niklas Heer</title><link rel="profile" href="http://osprotocol.com" />
-    <meta property="os:repo" content="https://github.com/RichardLitt/open-source-protocol" />
+    <title>Niklas Heer</title><meta charset="utf-8">
+    <meta property="og:title" content="Niklas Heer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The personal website of Niklas Heer." />
+    <meta property="og:url" content="http://nheer.io" />
+    <meta property="og:image" content="http://nheer.io/assets/avatar.jpg" />
+    <meta property="os:repo" content="https://github.com/niklas-heer/aboutme" />
     <meta property="os:rcs_type" content="git" />
-    <meta property="os:src" content="git@github.com:RichardLitt/open-source-protocol.git" />
+    <meta property="os:src" content="https://github.com/niklas-heer/aboutme.git" />
     <link rel="stylesheet" href="assets/css/main.css"/>
   </head>
   <body>
-    <div class="bgtint">
-      <section class="bussinesscard">
+    <div class="popover-wrap">
+      <div class="dots-container">
+        <div class="dots"></div>
+      </div>
+      <div class="popover-content">
+        <div class="popover-text">
+          <center>
+            <p>This project can be found on</p><a href="https://github.com/niklas-heer/aboutme" target="_blank"> <span class="link">GitHub</span></a>.
+          </center>
+        </div>
+      </div>
+    </div>
+    <div class="me">
+      <section class="card">
         <div class="flip">
           <div class="front">
             <div class="top">
-              <div class="logo">
-                <!--span.fat N-->
-                <!--span.skinny H--><img src="assets/img/avatar.jpg" alt="HTML5 Doctor Logo"/>
-              </div>
+              <div class="logo"><img src="assets/img/avatar.jpg" alt="HTML5 Doctor Logo"/></div>
             </div>
             <div class="nametroduction">
               <div class="name">Niklas Heer</div>
@@ -50,13 +64,11 @@
             </div>
           </div>
         </div>
-        <div class="back"></div>
-        <!-- FIXES FONT RENDERING-->
       </section>
     </div>
-    <section class="tooltip">
-      <p>Hover over the card to see the back.</p>
-    </section>
+    <!-- section.tooltip-->
+    <!--  p-->
+    <!--    | Hover over the card to see the back.-->
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
