@@ -14,7 +14,14 @@ setInterval (->
 
 $(".dots-container, .popover-content").click (e) ->
   e.stopPropagation()
-  $(this).siblings(".popover-content").fadeIn()
+  $popover = $("#popover")
+  if not $popover.hasClass('active')
+    $popover.fadeIn()
+    $popover.addClass('active')
+  else
+    $popover.fadeOut()
+    $popover.removeClass('active')
 
 $(document).click ->
-  $(".popover-content").fadeOut()
+  $popover = $("#popover")
+  $popover.fadeOut()
