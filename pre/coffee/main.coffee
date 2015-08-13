@@ -1,3 +1,4 @@
+#### Scrolling Text
 current = 1 #keeps track of the current div
 height = $(".roles").height() #the height of the roles div
 numberDivs = $(".roles").children().length #the number of children of the roles div
@@ -12,6 +13,7 @@ setInterval (->
     current++
 ), 2000
 
+#### Popover
 $(".dots-container, .popover-content").click (e) ->
   e.stopPropagation()
   $popover = $("#popover")
@@ -25,3 +27,28 @@ $(".dots-container, .popover-content").click (e) ->
 $(document).click ->
   $popover = $("#popover")
   $popover.fadeOut()
+
+#### Footer (Easter Egg)
+$("footer .love").hover ->
+  $FooterName = $("footer .name")
+  if $FooterName.hasClass('active')
+    $FooterName.removeClass('active')
+  else
+    $FooterName.addClass('active')
+
+$("footer .name").hover ->
+  $FooterName = $("footer .love")
+  if $FooterName.hasClass('active')
+    $FooterName.removeClass('active')
+  else
+    $FooterName.addClass('active')
+
+#### Modal
+$("body").click (event) ->
+  container = $(".modal")
+  container.closest(".modal-wrap").addClass "closed"  if not container.is(event.target) and container.has(event.target).length is 0
+
+$(".open-modal").click (event) ->
+  event.preventDefault()
+  event.stopPropagation()
+  $($(this).attr("href")).removeClass "closed"

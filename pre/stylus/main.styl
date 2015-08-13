@@ -1,12 +1,40 @@
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900')
 @import url('http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css')
 
-$_PrimaryColor = #0c8ac4
-$_SecondaryColor = #2a2b39
+$_PrimaryColor = rgb(12,138,196,1)
+$_SecondaryColor = rgb(42,43,57,1)
 $_HeaderColor = $_PrimaryColor
+$_FooterColor = rgb(64,64,71)
+$_BGImage = 'bg1.jpg'
 // lighter: #369cda
 // dark: #0c8ac4
 // darker: #2a3f5c
+
+
+// Mixin to mix colors
+mix(source, target, ammount)
+
+  ammount = unit(ammount, '%')
+
+  unless source is a 'rgba' and target is a 'rgba'
+    error('mix() expects rgb colour values')
+
+  rs = red(source)
+  gs = green(source)
+  bs = blue(source)
+
+  rt = red(target)
+  gt = green(target)
+  bt = blue(target)
+
+  ammount-s = (100 - ammount) / 100
+  ammount-t = ammount / 100
+
+  r = round((rs * ammount-s) + (rt * ammount-t))
+  g = round((gs * ammount-s) + (gt * ammount-t))
+  b = round((bs * ammount-s) + (bt * ammount-t))
+
+  rgb(r,g,b)
 
 $_BasePathImages = '../../assets/img/'
 
@@ -19,7 +47,7 @@ bg-image(image)
 
 body, html
   font-family 'Raleway', sans-serif
-  bg-image: 'bg.jpg'
+  bg-image: $_BGImage
   background-size cover
   margin 0
   padding 0
@@ -188,6 +216,8 @@ a
   height 25px
   vertical-align middle
   overflow hidden
+  .love
+    color: red
   div
     height 25px
     transition margin-top 1s ease-in-out
@@ -287,3 +317,94 @@ a
   position absolute
   background-color #636363
 
+$_FooterColorAlpha = alpha(rgb(255,255,255), 0.75)
+// Footer
+footer
+  background-color rgba(0,0,0,0.3)
+  padding-top 10px
+  position fixed
+  //color mix($_SecondaryColor, rgb(102,102,102), 10%)
+  color $_FooterColorAlpha
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  height 70px
+  width 100%
+  left 0
+  z-index 1000
+  bottom 0
+  a
+    color $_FooterColorAlpha
+  .footer-info
+    font-size 0.75em
+  .footer-legal
+    padding-top 1em
+    font-size 0.9em
+    font-weight 800
+  .love
+    margin-left 3px
+    &:hover
+      color alpha(red, 1)
+      text-shadow none
+  .love.active
+    color alpha(red, 1)
+    text-shadow none
+  .name
+    display inline-block
+    padding 1px
+    font-weight 500
+    background-position: 0 0;
+    background-size: 200%;
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background-image: linear-gradient(to top, $_PrimaryColor 50%, transparent 50%);
+    &:hover
+      text-decoration none
+      color $_SecondaryColor
+      background-position: 0 100%;
+      text-shadow none
+  .name.active
+    text-decoration none
+    color $_SecondaryColor
+    background-position: 0 100%;
+    text-shadow none
+  .link
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background-image: linear-gradient(to top, $_PrimaryColor 50%, transparent 50%);
+    background-position: 0 0;
+    font-weight 600
+    background-size: 200%;
+    padding 1px
+    &:hover
+      text-decoration none
+      color $_SecondaryColor
+      background-position: 0 100%;
+      text-shadow none
+
+// Modal
+.modal-wrap
+  z-index 1100
+  &:before
+    content: ""
+    background: rgba(0, 0, 0, 0.6)
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  // Closed
+  &.closed
+    display: none
+.modal
+  position: fixed
+  z-index 1100
+  top: 50px
+  left: 0px
+  right: 0px
+  margin: 0 auto
+  display: block
+  background: #fff
+  padding: 50px
+  width: 60%
+  //max-width: 100%
+  height 70%
+  overflow-x hidden
+  overflow-y scroll

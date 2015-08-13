@@ -17,7 +17,17 @@
     <meta property="os:repo" content="https://github.com/niklas-heer/aboutme" />
     <meta property="os:rcs_type" content="git" />
     <meta property="os:src" content="https://github.com/niklas-heer/aboutme.git" />
+    <!-- add css files-->
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <!-- Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-27512118-1', 'auto');
+        ga('send', 'pageview');
+    </script>
   </head>
   <body>
     <div class="popover-wrap">
@@ -46,7 +56,7 @@
                   <div class="roles">
                     <div>I am social.</div>
                     <div>I am curious.</div>
-                    <div>I ♥ free software.</div>
+                    <div>I <span class="ion-heart love"> </span> free software.</div>
                     <div>I am a web developer.</div>
                   </div>
                 </div>
@@ -73,10 +83,113 @@
         </div>
       </section>
     </div>
-    <!-- section.tooltip-->
-    <!--  p-->
-    <!--    | Hover over the card to see the back.-->
+    <footer>
+      <center>
+        <div class="footer-info">
+          <p>Made with </p><span class="ion-heart love"> </span> by <span class="name">Niklas Heer</span><br/>Released under the<a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank"> <span class="link">GNU GPLv3</span></a>
+        </div>
+        <div class="footer-legal"><a href="#imprint" class="open-modal"><span class="link">imprint</span></a> •<a href="#disclaimer" class="open-modal"> <span class="link">disclaimer</span></a> •<a href="#privacy" class="open-modal"> <span class="link">privacy</span></a></div>
+      </center>
+    </footer>
   </body>
+  <!-- imprint modal-->
+  <div id="imprint" class="modal-wrap closed">
+    <div class="modal">
+      <center>
+        <h1>Imprint</h1>
+        <h2>About the owner of this site:</h2>
+        <p>Niklas Heer</p><br/>Schlehenweg 40<br/>74405 Gaildorf<br/>Germany
+        <h2>Contact:</h2>
+        <table>
+          <tr>
+            <td><b>phone:</b></td>
+            <td>+497971979838</td>
+          </tr>
+          <tr>
+            <td> <b>mail:</b></td>
+            <td> <a href="mailto:me@nheer.io">me@nheer.io</a></td>
+          </tr>
+        </table>
+        <h2>Things I used:</h2>
+        <table>
+          <tr>
+            <td><b>background image:</b></td>
+            <td><a href="http://www.hdwallpapers.net/preview/starry-night-wallpaper-for-2880x1800-60-851.htm">http://hdwallpapers.net</a></td>
+          </tr>
+          <tr>
+            <td><b>icons: </b></td>
+            <td><a href="http://ionicons.com/">http://ionicons.com/</a></td>
+          </tr>
+        </table>
+      </center>
+      <hr/>
+      <center>
+        <h1>Impressum</h1>
+        <h2>Angaben gemäß § 5 TMG:</h2>
+        <p>Niklas Heer</p><br/>Schlehenweg 40<br/>74405 Gaildorf<br/>Deutschland
+        <h2>Kontakt:</h2>
+        <table>
+          <tr>
+            <td><b>Telefon:</b></td>
+            <td>+497971979838</td>
+          </tr>
+          <tr>
+            <td> <b>E-Mail:</b></td>
+            <td> <a href="mailto:me@nheer.io">me@nheer.io</a></td>
+          </tr>
+        </table>
+        <h2>Quellenangaben für die verwendeten Bilder und Grafiken:</h2>
+        <table>
+          <tr>
+            <td><b>Hintergrundbild:</b></td>
+            <td><a href="http://www.hdwallpapers.net/preview/starry-night-wallpaper-for-2880x1800-60-851.htm">http://hdwallpapers.net</a></td>
+          </tr>
+          <tr>
+            <td><b>Icons: </b></td>
+            <td><a href="http://ionicons.com/">http://ionicons.com/</a></td>
+          </tr>
+        </table>
+      </center>
+    </div>
+  </div>
+  <!-- disclaimer modal-->
+  <div id="disclaimer" class="modal-wrap closed">
+    <div class="modal">
+      <center>
+        <h1>Haftungsausschluss (Disclaimer)</h1>
+        <p><strong>Haftung für Inhalte</strong></p> 
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p> 
+        <p><strong>Haftung für Links</strong></p> 
+        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p> 
+        <p><strong>Urheberrecht</strong></p> 
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+        <p>&nbsp;</p>
+      </center>
+    </div>
+  </div>
+  <!-- privacy modal-->
+  <div id="privacy" class="modal-wrap closed">
+    <div class="modal">
+      <center>
+        <h1>Datenschutzerklärung:</h1>
+        <p><strong>Datenschutz</strong></p>
+        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.</p>
+        <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p><br/><br/>
+        <p><strong>Datenschutzerklärung für die Nutzung von Google Analytics</strong></p>
+        <p>Diese Website nutzt Funktionen des&nbsp; Webanalysedienstes Google Analytics. Anbieter ist die Google Inc. 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. Google Analytics verwendet sog. "Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.</p>
+        <p>Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.</p>
+        <p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="http://tools.google.com/dlpage/gaoptout?hl=de">http://tools.google.com/dlpage/gaoptout?hl=de</a></p><br/><br/>
+        <p><strong>Cookies</strong></p>
+        <p>Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert.</p>
+        <p>Die meisten der von uns verwendeten Cookies sind so genannte &bdquo;Session-Cookies&ldquo;. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.</p>
+        <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein.</p><br/><br/>
+        <p><strong>Kontaktformular</strong></p>
+        <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      </center>
+    </div>
+  </div>
+  <!-- import needed scripts-->
   <script src="vendor/jquery-2.1.4.min.js"></script>
   <script src="assets/js/main.js"></script>
 </html>
