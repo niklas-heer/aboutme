@@ -51,4 +51,13 @@ $("body").click (event) ->
 $(".open-modal").click (event) ->
   event.preventDefault()
   event.stopPropagation()
+  console.log ($($(this).attr("href"))) 
   $($(this).attr("href")).removeClass "closed"
+
+popModal = (id) ->
+  console.log(id + ".modal-wrap")
+  $("#"+id).removeClass "closed"
+
+hash = window.location.hash
+
+popModal(hash.substring(1))
